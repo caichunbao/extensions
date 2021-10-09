@@ -1,0 +1,19 @@
+[{
+    "id" : 1,
+    "priority": 1,
+    "action" : {
+        "type" : "modifyHeaders",
+        "requestHeaders": [
+            {
+                "header": "tokensss",
+                "operation": "set",
+                "value": "tokensss value"
+            }
+        ]
+    },
+    "condition" : {
+        "urlFilter" : "ac",
+        "domains" : ["xue.17xueba.com"],
+        "resourceTypes" : ["script"]
+    }
+}]
