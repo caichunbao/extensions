@@ -1,0 +1,16 @@
+{
+    "name": "test",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": ["https://*.17xueba.com/*"],
+            "js": ["content_script.js"],
+            "all_frames": true
+        }
+    ],
+    "permissions": [
+        "tabs"
+    ],
+    "options_page": "options.html"
+}
