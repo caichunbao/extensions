@@ -13,3 +13,7 @@ let btnElem = document.getElementsByClassName('btn')
 if(btnElem && btnElem[0]){
     btnElem[0].style.backgroundColor = "yellow"
 }
+
+console.log("window", window)
+console.log("chrome", chrome)
+console.log("this", this)
