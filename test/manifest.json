@@ -2,15 +2,35 @@
     "name": "test",
     "version": "1.0.0",
     "manifest_version": 3,
+    "background":{
+        "service_worker": "background.js"
+    },
     "content_scripts": [
         {
             "matches": ["https://*.17xueba.com/*"],
-            "js": ["content_script.js"],
+            "js": [
+                "content_script.js",
+                "test.js"
+            ],
             "all_frames": true
         }
     ],
     "permissions": [
-        "tabs"
+        "tabs",
+        "bookmarks",
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback"
     ],
+    "host_permissions": [
+        "https://*.17xueba.com/*",
+        "<all_urls>"
+    ],
+    "declarative_net_request": {
+        "rule_resources" : [{
+            "id": "rules",
+            "enabled": true,
+            "path": "rules.json"
+        }]
+    },
     "options_page": "options.html"
 }

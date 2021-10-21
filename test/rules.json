@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [
+                { "header": "h3", "operation": "append", "value": "v3" }
+            ]
+        },
+        "condition": { "urlFilter": "https://*.17xueba.com/*", "resourceTypes": ["xmlhttprequest"] }
+    },
+    {
+        "id": 2,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "regexSubstitution": "https://countly.mail.163.com/stats/i"
+            }
+        },
+        "condition": { "regexFilter": "https://xue.17xueba.com/m/msg/noRead.vpage", "resourceTypes": ["xmlhttprequest"] }
+    }
+]
